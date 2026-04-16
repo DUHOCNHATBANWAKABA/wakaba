@@ -3,6 +3,10 @@ backend:
   repo: DUHOCHNATBANWAKABA/wakaba
   branch: main
 
+  # Thêm thông tin OAuth App
+  app_id: <Client ID bạn vừa tạo>
+  auth_scope: repo
+
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
@@ -13,6 +17,12 @@ collections:
       - file: "index.html"
         label: "Trang chủ"
         name: "home"
+        fields:
+          - {label: "Tiêu đề", name: "title", widget: "string"}
+          - {label: "Nội dung", name: "body", widget: "markdown"}
+      - file: "introl.html"
+        label: "Giới thiệu"
+        name: "intro"
         fields:
           - {label: "Tiêu đề", name: "title", widget: "string"}
           - {label: "Nội dung", name: "body", widget: "markdown"}
