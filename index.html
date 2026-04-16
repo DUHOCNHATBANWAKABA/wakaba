@@ -4,26 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Du học Nhật Bản Wakaba</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Poppins', sans-serif;
       margin: 0;
       padding: 0;
-      background: #f5f7fa;
+      background: #fdfdfd;
       color: #333;
     }
     header {
-      background: linear-gradient(90deg, #2e86de, #48c9b0);
+      background: url('https://images.unsplash.com/photo-1554118811-1e0d58224f24?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
       color: white;
-      padding: 20px;
+      padding: 80px 20px;
       text-align: center;
     }
     header h1 {
       margin: 0;
-      font-size: 2.2em;
+      font-size: 3em;
+      font-weight: 600;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+    }
+    header p {
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
     nav {
-      background: #1b4f72;
+      background: #2e86de;
       display: flex;
       justify-content: center;
     }
@@ -31,35 +40,54 @@
       color: white;
       text-decoration: none;
       padding: 14px 20px;
-      display: block;
+      font-weight: 600;
     }
     nav a:hover {
       background: #145a32;
     }
     section {
-      padding: 40px;
-      max-width: 900px;
+      padding: 50px 20px;
+      max-width: 1000px;
       margin: auto;
+      line-height: 1.6;
     }
     section h2 {
       color: #2e86de;
       margin-bottom: 20px;
+      font-size: 2em;
+    }
+    .programs ul {
+      list-style: none;
+      padding: 0;
+    }
+    .programs li {
+      background: #eaf2f8;
+      margin: 10px 0;
+      padding: 15px;
+      border-radius: 8px;
+      font-weight: 500;
     }
     .contact {
-      background: #eaf2f8;
-      padding: 20px;
-      border-radius: 8px;
+      background: #f0f8ff;
+      padding: 30px;
+      border-radius: 10px;
       text-align: center;
       margin-top: 40px;
     }
     .contact h3 {
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      color: #2e86de;
+    }
+    .contact a {
+      color: #e74c3c;
+      font-weight: 600;
+      text-decoration: none;
     }
     footer {
       background: #1b4f72;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 20px;
       margin-top: 40px;
     }
   </style>
@@ -81,7 +109,7 @@
     <p>Wakaba là trung tâm tư vấn du học Nhật Bản uy tín, giúp học sinh và sinh viên Việt Nam tiếp cận nền giáo dục hiện đại, cơ hội nghề nghiệp rộng mở và trải nghiệm văn hóa đặc sắc.</p>
   </section>
 
-  <section id="chuong-trinh">
+  <section id="chuong-trinh" class="programs">
     <h2>Chương trình du học</h2>
     <ul>
       <li>Du học tiếng Nhật ngắn hạn</li>
