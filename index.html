@@ -1,166 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WAKABA - DU HỌC NHẬT BẢN</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-
-<style>
-/* BOX TIÊU ĐỀ */
-.title-box {
-    background: #fff;
-    border-left: 6px solid #E82127;
-    padding: 10px 15px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* CĂN GIỮA NỘI DUNG */
-.container-custom {
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-}
-
-/* ẢNH */
-.gioi-thieu-imgs {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
-
-.gioi-thieu-img {
-    border-radius: 8px;
-    transition: 0.3s;
-}
-
-.img-gt01 { width: 500px; }
-.img-gt02 { width: 800px; }
-
-.gioi-thieu-img:hover {
-    transform: scale(1.05);
-}
-
-/* CHƯƠNG TRÌNH */
-.chuong-trinh-imgs {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.chuong-trinh-img {
-    width: 420px;
-    height: 595px;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* CONTACT */
-.contact {
-    border: 2px solid #4CAF50;
-    border-radius: 8px;
-    padding: 20px;
-    margin: 30px auto;
-    background-color: #f9f9f9;
-    max-width: 700px;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAKABA - DU HỌC NHẬT BẢN</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vnpcRed: '#E82127',
+                        vnpcDark: '#1A1A1A',
+                        vnpcBlue: '#0F52BA',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
+<body class="font-sans">
+    <!-- Header Top Bar -->
+    <header class="bg-vnpcDark text-white">
+        <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+            <!-- Logo WAKABA -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 relative">
+                        <div class="absolute left-0 bottom-0 w-7 h-7 bg-vnpcRed rounded-full"></div>
+                        <div class="absolute right-0 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+                    </div>
+                    <div class="ml-2">
+                        <h1 class="text-xl font-bold">WAKABA</h1>
+                        <p class="text-xs text-gray-400">Overseas Study & More</p>
+                    </div>
+                </div>
+            </div>
 
-<body class="bg-gray-100">
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-md mx-8">
+                <input type="text" placeholder="Nhập từ khoá" class="w-full px-4 py-2 rounded-sm focus:outline-none text-gray-700">
+                <button class="bg-transparent px-3">
+                    <i class="fa-solid fa-magnifying-glass text-gray-400"></i>
+                </button>
+            </div>
 
-<!-- HEADER -->
-<header class="bg-black text-white p-4 text-center">
-    <h1 class="text-xl font-bold">WAKABA</h1>
-</header>
+            <!-- Top Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="hover:text-vnpcRed transition-colors">SỰ KIỆN</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">ĐĂNG KÝ</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">TUYỂN DỤNG</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">LIÊN HỆ</a>
+            </nav>
 
-<!-- NAV -->
-<nav class="bg-red-600 text-white text-center py-2">
-    <a href="#gioi-thieu" class="mx-3">Giới thiệu</a>
-    <a href="#chuong-trinh" class="mx-3">Chương trình</a>
-    <a href="#lien-he" class="mx-3">Liên hệ</a>
-    <a href="#hinh-anh" class="mx-3">Hình ảnh</a>
-</nav>
+            <!-- Mobile Menu -->
+            <button class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-<div class="container-custom">
+    <!-- Main Navigation Bar -->
+    <nav class="bg-WAKABARed text-white">
+        <div class="container mx-auto px-4">
+            <ul class="flex overflow-x-auto py-3 gap-6 md:gap-8 items-center">
+                <li class="flex items-center">
+                    <i class="fa-solid fa-house mr-2"></i>
+                </li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">GIỚI THIỆU</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">DU HỌC</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">HỌC BỔNG</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">DỊCH VỤ</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">TÌM TRƯỜNG</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<!-- GIỚI THIỆU -->
+    <!-- Hero Banner -->
+    <section class="relative bg-white overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white z-0">
+            <img src="02.png" class="w-full h-full object-cover opacity-40">
+        </div>
+
+        <div class="container mx-auto px-6 py-12 relative z-10">
+            <div class="flex flex-col lg:flex-row gap-10 items-start">
+
+                <div class="w-full lg:w-1/2 space-y-6">
+                    <h2 class="italic text-blue-800">LIÊN HỆ</h2>
+                    <p class="font-bold text-vnpcRed">CÔNG TY DU HỌC WAKABA</p>
+
+                    <ul>
+                        <li># Đậu visa 100%</li>
+                        <li>Học bổng toàn phần</li>
+                        <li>vừa học vừa làm</li>
+                        <li>UY TÍN - TRÁCH NHIỆM - TẬN TÂM</li>
+                        <li>TƯ VẤN MIỄN PHÍ</li>
+                    </ul>
+
+                    <p>Tầng 5, 70 Phạm Ngọc Thạch, TP.HCM</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
 <section id="gioi-thieu">
-    <div class="title-box">Giới thiệu</div>
+  <h2>Giới thiệu</h2>
+  <p>
+    Wakaba là trung tâm tư vấn du học Nhật Bản uy tín, giúp học sinh và sinh viên Việt Nam tiếp cận nền giáo dục hiện đại.
+  </p>
 
-    <p>
-        Wakaba là trung tâm tư vấn du học Nhật Bản uy tín, giúp học sinh và sinh viên Việt Nam tiếp cận nền giáo dục hiện đại.
-    </p>
-
-    <div class="gioi-thieu-imgs">
-        <figure>
-            <img src="TV03.jpg" class="gioi-thieu-img img-gt01">
-            <figcaption>Hoạt động tư vấn du học tại Wakaba</figcaption>
-        </figure>
-
-        <figure>
-            <img src="TV04.png" class="gioi-thieu-img img-gt02">
-            <figcaption>Tất cả các học bổng</figcaption>
-        </figure>
-    </div>
+  <img src="TV03.jpg">
+  <img src="TV04.png">
 </section>
 
-<!-- CHƯƠNG TRÌNH -->
 <section id="chuong-trinh">
-    <div class="title-box">Chương trình du học</div>
-
-    <ul>
-        <li>Du học tiếng Nhật ngắn hạn</li>
-        <li>Du học đại học và sau đại học</li>
-        <li>Chương trình học bổng hỗ trợ tài chính</li>
-
-        <figure>
-            <img src="Tv 05.png" class="gioi-thieu-img img-gt02">
-            <figcaption>Tất cả các học bổng</figcaption>
-        </figure>
-
-        <li>Tư vấn định hướng nghề nghiệp tại Nhật Bản</li>
-    </ul>
-
-    <div class="chuong-trinh-imgs">
-        <img src="Tv06.png" class="chuong-trinh-img">
-    </div>
+  <h2>Chương trình</h2>
+  <ul>
+    <li>Du học tiếng Nhật</li>
+    <li>Du học đại học</li>
+  </ul>
 </section>
 
-<!-- LIÊN HỆ -->
 <section id="lien-he">
-    <div class="title-box">Liên hệ với chúng tôi</div>
-
-    <div class="contact">
-        <p><strong>📞 Điện thoại:</strong> +84 904 754 197</p>
-        <p><strong>✉️ Email:</strong> dungwakaba@gmail.com</p>
-        <p><strong>📍 Địa chỉ:</strong> Tầng 5, 70 Phạm Ngọc Thạch, TP. Hồ Chí Minh</p>
-    </div>
+  <h2>Liên hệ</h2>
+  <p>📞 0904754197</p>
 </section>
 
-<!-- PDF -->
-<section id="hinh-anh">
-    <div class="title-box">Tài liệu</div>
-
-    <a href="giaychungnhan.pdf" target="_blank">
-        Xem Giấy chứng nhận đăng ký doanh nghiệp (PDF)
-    </a>
-
-    <br><br>
-
-    <iframe src="giaychungnhan.pdf" width="100%" height="500"></iframe>
-</section>
-
-</div>
-
-<!-- FOOTER -->
-<footer class="bg-black text-white text-center p-3">
-    <p>&copy; 2026 Du học Nhật Bản Wakaba</p>
+<footer>
+  <p>© Wakaba</p>
 </footer>
 
 </body>
