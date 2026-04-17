@@ -124,33 +124,37 @@
 </div>
 
 <style>
-  .gt01.png {
+  .gioi-thieu-imgs {
     display: flex;
     justify-content: center;
-    gap: px;
+    gap: 15px;
     margin-top: 20px;
   }
 
   /* Kích thước mặc định */
-  .gt02.png {
+  .gioi-thieu-img {
     border-radius: 8px;
     height: auto;
     transition: transform 0.3s ease;
   }
 
   /* Chỉnh riêng từng hình */
-  .gt01 {
-       width: 50%;   /* 50% chiều ngang màn hình */
-    max-width: 50vw; /* Giới hạn theo viewport */
+  .img-gt01 {
+    width: 50%;   /* Hình 1 chiếm nửa màn hình */
   }
 
-  .gt02 {
-    width: 150px;   /* Hình 2 trung bình */
+  .img-gt02 {
+    width: 150px; /* Hình 2 nhỏ gọn */
   }
 
-  .gt03 {
-    width: 200px;   /* Hình 3 lớn hơn */
+  .img-gt03 {
+    width: 200px; /* Hình 3 lớn hơn */
   }
+
+  .gioi-thieu-img:hover {
+    transform: scale(1.1);
+  }
+</style>
 
   .gioi-thieu-img:hover {
     transform: scale(1.1); /* Hiệu ứng phóng to khi rê chuột */
