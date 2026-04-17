@@ -14,12 +14,16 @@
       background: #fdfdfd;
       color: #333;
     }
-    header {
-    background: url('nen/nen.jpg') no-repeat center center;
-    background-size: cover;
-    color: white;
-    padding: 80px 20px;
-    text-align: center;
+   header {
+      background: url('nen/nen.jpg') no-repeat center center;
+      background-size: cover;   /* tự co giãn vừa khung */
+      min-height: 100vh;        /* chiếm toàn bộ chiều cao màn hình */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
 }
     }
     header h1 {
