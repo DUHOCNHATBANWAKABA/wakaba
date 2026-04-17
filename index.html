@@ -3,172 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wakaba - Du học & Dịch vụ học tập nước ngoài</title>
-    <!-- Sử dụng Tailwind CSS cdn --></script>
-    <!-- Sử dụng Font Awesome cho các biểu tượng -->
+    <title>Wakaba - Overseas Study & More</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        wakabaRed: '#E82127',
-                        wakabaDark: '#1A1A1A',
-                        wakabaOrange: '#FF9933',
+                        wakabaDark: '#121212',
                     },
                     fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                        serif: ['Georgia', 'serif'],
                     },
                 }
             }
         }
     </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
 </head>
-<body class="font-sans bg-gray-100">
-    <!-- Header Top Bar (Màu Đen) -->
-    <header class="bg-wakabaDark text-white shadow-lg">
-        <div class="container mx-auto px-4 py-3 flex items-center justify-between border-b border-gray-700">
-            <!-- Logo Công ty Wakaba -->
-            <div class="flex items-center gap-3 min-w-[120px]">
-                <div class="flex items-center">
-                    <div class="w-7 h-7 relative">
-                        <div class="absolute left-0 bottom-0 w-5 h-5 bg-green-600 rounded-full"></div>
-                        <div class="absolute right-0 top-0 w-4 h-4 bg-blue-500 rounded-full"></div>
-                    </div>
-                    <div class="ml-2">
-                        <h1 class="text-xl font-bold">WAKABA</h1>
-                        <p class="text-[10px] text-gray-400 -mt-1">Overseas Study & More</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Search Bar -->
-                <button class="px-2">
-                    <i class="fa-solid fa-magnifying-glass text-gray-400 text-sm"></i>
-                </button>
-            </div>
-
-            <!-- Top Menu (Right) -->SỰ KIỆN</a>ĐĂNG KÝ</a>TUYỂN DỤNG</a>LIÊN HỆ</a>
-            </nav>
-
-            <!-- Address Bar Mockup Info -->wakaba.vn</div>
-        </div>
-    </header>
-
-    <!-- Main Navigation Bar (Màu Đỏ) -->
-    <nav class="bg-wakabaRed text-white shadow-md">
-        <div class="container mx-auto px-4">
-                <li class="flex items-center whitespace-nowrap">
-                    <i class="fa-solid fa-house mr-2 text-lg"></i>
-                </li>
-                <li class="whitespace-nowrap">GIỚI THIỆU</a></li>
-                <li class="whitespace-nowrap">DU HỌC</a></li>
-                <li class="whitespace-nowrap">HỌC BỔNG</a></li>
-                <li class="whitespace-nowrap">DỊCH VỤ</a></li>
-                <li class="whitespace-nowrap">TÌM TRƯỜNG</a></li>
-                <li class="whitespace-nowrap">NGOẠI NGỮ DU HỌC</a></li>
-                <li class="whitespace-nowrap">TIN TỨC</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <!-- Banner Quảng Cáo Sự Kiện -->
-    <section class="relative bg-white pb-20">
-        <div class="absolute inset-0 bg-gradient-to-r from-yellow-200 via-yellow-100 to-white z-0"></div>
-        <div class="absolute right-0 top-0 h-full w-2/5 min-w-[300px] hidden lg:block z-10 overflow-hidden">
-            <div class="absolute top-0 right-0 w-full h-full rounded-full bg-yellow-400/20 transform translate-x-1/4 translate-y-1/4"></div>
+<body class="bg-wakabaDark text-white font-serif">
+    <!-- Container chính toàn trang -->
+    <div class="container mx-auto px-6 py-10 max-w-7xl">
+        <!-- Header Logo & Slogan -->
+        <div class="mb-10">
+            <h1 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold tracking-wider mb-3">WAKABA</h1>
+            <p class="text-gray-300">Overseas Study & More</p>
         </div>
 
-        <div class="container mx-auto px-4 pt-10 relative z-20">Phỏng vấn</h2>
-            <p class="text-[clamp(1.5rem,4vw,2.5rem)] font-extrabold text-gray-800 mb-6">
-                HỌC BỔNG DU HỌC ÚC LÊN ĐẾN <span class="text-wakabaRed">50% HỌC PHÍ</span>
-            </p>
-                <!-- Khối Thông tin -->
-                <div class="bg-blue-900 p-5 rounded-lg shadow-xl w-full max-w-md -mt-2">
-                    <div class="bg-blue-500 p-2 rounded-t-lg -mt-7 -mx-2 mb-4 text-center">
-                        <h3 class="font-bold text-xl text-white">Thông tin</h3>
-                    </div>
-                    <ul class="text-white space-y-3">
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-yellow-300 mt-1 mr-2 text-sm flex-shrink-0"></i>
-                            Kỳ nhập học: Tháng 9/2026
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-yellow-300 mt-1 mr-2 text-sm flex-shrink-0"></i>
-                            Thời gian phỏng vấn: (Địa điểm sẽ được thông báo sau)
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-yellow-300 mt-1 mr-2 text-sm flex-shrink-0"></i>
-                            TP. Hồ Chí Minh: Thứ Bảy, 18/04/2026
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fa-solid fa-circle-check text-yellow-300 mt-1 mr-2 text-sm flex-shrink-0"></i>
-                            Hà Nội: Chủ Nhật, 19/04/2026
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- Khối Hạn nộp & Đăng ký -->
-                    <div class="bg-wakabaOrange p-4 rounded-full shadow-lg px-10 text-center">
-                        <span class="text-gray-800 font-semibold text-lg block">HẠN NỘP HỒ SƠ:</span>
-                        <span class="text-white font-extrabold text-2xl">10/04/2026</span>
-                    </div><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                        ĐĂNG KÝ NGAY
-                    </button>
-                    
-                    <!-- Cập nhật thông tin liên hệ theo yêu cầu -->
-                    <div class="mt-4 text-center">
-                        <p class="text-sm text-gray-600">Li hệ hệ thống hotline:</p>
-                        <p class="font-bold text-wakabaRed">+84904754197</p>
-                        <p class="text-sm text-gray-600 mt-1">Hoặc truy cập: <span class="text-blue-600 font-bold">wakaba.vn</span></p>
-                    </div>
-                </div>
-
-                <!-- Hình ảnh học sinh --> object-cover rounded-lg shadow-2xl border-4 border-white">
-                </div>
+        <!-- Menu Ngang Phía Trên -->
+        <div class="border-t border-gray-500 pt-3 pb-8 mb-8">
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="#" class="hover:text-gray-300 transition-colors">SỰ KIỆN</a>
+                <a href="#" class="hover:text-gray-300 transition-colors">ĐĂNG KÝ</a>
+                <a href="#" class="hover:text-gray-300 transition-colors">TUYỂN DỤNG</a>
+                <a href="#" class="hover:text-gray-300 transition-colors">LIÊN HỆ</a>
+                <span class="text-gray-400 ml-auto">wakaba.vn</span>
             </div>
         </div>
 
-        <!-- Floating Social Buttons -->
-        <div class="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-3">
-                <i class="fa-brands fa-facebook-f"></i>
-            </a>
-                <i class="fa-brands fa-zalo"></i>
-            </a>
-                <i class="fa-solid fa-phone"></i>
-            </a>
-        </div>
-        
-        <!-- Indicator Dots -->
-        <div class="absolute bottom-4 left-0 right-0 flex justify-center space-x-2 z-30">
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-wakabaRed rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-            <div class="w-2 h-2 bg-gray-400 rounded-full"></div>
-        </div>
-    </section>
-    
-    <!-- Phần Giới thiệu công ty -->
-    <section class="bg-gray-50 py-12">
-        <div class="container mx-auto px-4">
-            <h2 class="text-2xl font-bold text-wakabaDark mb-6">VỀ CÔNG TY WAKABA</h2>
-                <div>
-                    <p class="text-gray-700 leading-relaxed mb-4">
-                        CÔNG TY TNHH WAKABA chuyên cung cấp dịch vụ tư vấn du học, học bổng và hỗ trợ sinh viên sau khi đến nước.
-                    </p>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-sm">
-                    <h3 class="font-bold text-lg mb-3 text-wakabaRed">Thông tin liên hệ</h3>
-                    <p class="flex items-center gap-2 mb-2"><i class="fa-solid fa-phone text-wakabaRed"></i> +84904754197</p>
-                    <p class="flex items-center gap-2 mb-2"><i class="fa-solid fa-envelope text-wakabaRed"></i> info@wakaba.vn</p>
-                    <p class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-wakabaRed"></i> Trụ sở chính tại Việt Nam</p>
-                </div>
+        <!-- Menu Dọc Bên Trái -->
+        <nav class="mb-10 space-y-2">
+            <a href="#" class="block hover:text-gray-300 transition-colors">GIỚI THIỆU</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">DU HỌC</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">HỌC BỔNG</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">DỊCH VỤ</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">TÌM TRƯỜNG</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">NGOẠI NGỮ DU HỌC</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">TIN TỨC</a>
+            <a href="#" class="block hover:text-gray-300 transition-colors">Phỏng vấn</a>
+        </nav>
+
+        <!-- Nội dung chính sự kiện -->
+        <section class="mb-12">
+            <h2 class="text-xl font-bold mb-6">HỌC BỔNG DU HỌC ÚC LÊN ĐẾN 50% HỌC PHÍ</h2>
+
+            <div class="mb-8">
+                <h3 class="text-lg font-bold mb-4">Thông tin</h3>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>Kỳ nhập học: Tháng 9/2026</li>
+                    <li>Thời gian phỏng vấn: (Địa điểm sẽ được thông báo sau)</li>
+                    <li>TP. Hồ Chí Minh: Thứ Bảy, 18/04/2026</li>
+                    <li>Hà Nội: Chủ Nhật, 19/04/2026</li>
+                </ul>
             </div>
-        </div>
-    </section>
+
+            <div class="mb-8 space-y-2">
+                <p class="font-bold">HẠN NỘP HỒ SƠ: 10/04/2026</p>
+                <a href="#" class="block font-bold hover:text-gray-300 transition-colors">ĐĂNG KÝ NGAY</a>
+            </div>
+
+            <div class="mb-8 space-y-3">
+                <p>Li hệ hệ thống hotline:</p>
+                <p class="text-white/90">+84904754197</p>
+                <p>Hoặc truy cập: <a href="#" class="text-blue-400 hover:underline">wakaba.vn</a></p>
+            </div>
+        </section>
+
+        <!-- Phần giới thiệu công ty -->
+        <section class="mb-10">
+            <h2 class="text-2xl font-bold mb-4">VỀ CÔNG TY WAKABA</h2>
+            <p class="text-balance mb-6">CÔNG TY TNHH WAKABA chuyên cung cấp dịch vụ tư vấn du học, học bổng và hỗ trợ sinh viên sau khi đến nước.</p>
+
+            <div class="mb-6">
+                <h3 class="text-lg font-bold mb-3">Thông tin liên hệ</h3>
+                <p class="mb-2">+84904754197</p>
+                <p class="text-blue-400">info@wakaba.vn</p>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
 </head>
