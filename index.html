@@ -1,104 +1,155 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Du học Nhật Bản Wakaba</title>
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fdfdfd;
-      color: #333;
-    }
-   header {
-    background: url('03.png') no-repeat center center;
-    background-size: contain;   /* ảnh co giãn vừa khung, không bị cắt */
-    background-color: #000;     /* màu nền phụ nếu ảnh không phủ hết */
-    height: 400px;              /* chỉnh chiều cao header */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VNPC - Du học Úc & Dịch vụ học tập nước ngoài</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        vnpcRed: '#E82127',
+                        vnpcDark: '#1A1A1A',
+                        vnpcBlue: '#0F52BA'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans">
+    <!-- Header Top -->
+    <header class="bg-vnpcDark text-white shadow-md">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 relative">
+                        <div class="absolute left-0 bottom-0 w-7 h-7 bg-vnpcRed rounded-full"></div>
+                        <div class="absolute right-0 top-0 w-6 h-6 bg-blue-500 rounded-full"></div>
+                    </div>
+                    <div class="ml-2">
+                        <h1 class="text-[clamp(1.25rem,2vw,1.75rem)] font-bold">VNPC</h1>
+                        <p class="text-xs text-gray-400">Overseas Study & More</p>
+                    </div>
+                </div>
+            </div>
 
-}
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      font-weight: 600;
-      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
-    }
-    header p {
-      font-size: 1.2em;
-      margin-top: 10px;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
-    }
-    nav {
-      background: #2e86de;
-      display: flex;
-      justify-content: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      font-weight: 600;
-    }
-    nav a:hover {
-      background: #145a32;
-    }
-    section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-      line-height: 1.6;
-    }
-    section h2 {
-      color: #2e86de;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
-    .programs ul {
-      list-style: none;
-      padding: 0;
-    }
-    .programs li {
-      background: #eaf2f8;
-      margin: 10px 0;
-      padding: 15px;
-      border-radius: 8px;
-      font-weight: 500;
-    }
-    .contact {
-      background: #f0f8ff;
-      padding: 30px;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .contact h3 {
-      margin-bottom: 15px;
-      color: #2e86de;
-    }
-    .contact a {
-      color: #e74c3c;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    footer {
-      background: #1b4f72;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-    }
-  </style>
+            <!-- Search Bar -->
+            <div class="hidden md:flex flex-1 max-w-md mx-8">
+                <input type="text" placeholder="Nhập từ khoá" class="w-full px-4 py-2 rounded-sm focus:outline-none text-gray-700 border border-gray-300">
+                <button class="bg-vnpcRed px-3 text-white hover:bg-red-700 transition-colors">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Top Menu -->
+            <nav class="hidden md:flex items-center gap-8">
+                <a href="#" class="hover:text-vnpcRed transition-colors">SỰ KIỆN</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">ĐĂNG KÝ</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">TUYỂN DỤNG</a>
+                <a href="#" class="hover:text-vnpcRed transition-colors">LIÊN HỆ</a>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="bg-vnpcRed text-white shadow">
+        <div class="container mx-auto px-4">
+            <ul class="flex overflow-x-auto py-4 gap-6 md:gap-8 items-center">
+                <li class="flex items-center">
+                    <i class="fa-solid fa-house mr-2"></i>
+                </li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">GIỚI THIỆU</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">DU HỌC</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">HỌC BỔNG</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">DỊCH VỤ</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">TÌM TRƯỜNG</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">NGOẠI NGỮ DU HỌC</a></li>
+                <li><a href="#" class="whitespace-nowrap hover:underline">TIN TỨC</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <section class="relative">
+        <div class="w-full h-[70vh] bg-gradient-to-r from-blue-50 to-blue-100 relative overflow-hidden">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0">
+                <img src="https://picsum.photos/id/1038/1920/1080" alt="Thành phố Sydney" class="w-full h-full object-cover opacity-30">
+                <div class="absolute inset-0 bg-black/20"></div>
+            </div>
+            
+            <div class="container mx-auto px-6 py-12 relative z-10 flex flex-col justify-center h-full">
+                <div class="max-w-3xl">
+                    <h2 class="text-[clamp(1.75rem,4vw,2.75rem)] text-vnpcBlue font-bold mb-4">DU HỌC ÚC</h2>
+                    <p class="text-[clamp(2rem,5vw,3.5rem)] font-extrabold text-vnpcRed mb-6">HỌC BỔNG LÊN ĐẾN</p>
+                    <div class="flex items-baseline gap-2 mb-8">
+                        <span class="text-[clamp(3rem,8vw,6rem)] font-extrabold text-blue-600">50%</span>
+                        <span class="text-[clamp(1.5rem,3vw,2.25rem)] text-blue-600 font-bold">HỌC PHÍ</span>
+                    </div>
+                    <p class="text-[clamp(1rem,2vw,1.5rem)] text-gray-100 mb-8">CƠ HỘI Ở LẠI LÀM VIỆC SAU KHI TỐT NGHIỆP</p>
+                    
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <button class="bg-vnpcRed hover:bg-red-700 transition-colors text-white px-8 py-3 rounded-sm flex items-center gap-2 font-bold shadow-lg">
+                            ĐĂNG KÝ NGAY
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                        
+                        <div class="flex items-center gap-3 bg-white/90 p-4 rounded-lg shadow-md">
+                            <i class="fa-solid fa-mobile-screen-button text-vnpcRed text-2xl"></i>
+                            <div class="text-gray-800">
+                                <p class="font-bold">091 434 3738</p>
+                                <p class="font-bold">091 834 3738</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side Decor -->
+            <div class="absolute right-0 top-0 bottom-0 w-1/3 bg-gradient-to-br from-vnpcRed to-blue-900 opacity-90"></div>
+            
+            <!-- Model Image -->
+            <div class="absolute right-10 bottom-0 z-20 hidden md:block">
+                <img src="https://picsum.photos/id/64/500/700" alt="Học sinh du học Úc" class="h-[90%] object-contain drop-shadow-xl">
+            </div>
+
+            <!-- Australian Flag -->
+            <div class="absolute right-0 top-0 z-10 w-48 h-auto opacity-80">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/Flag_of_Australia_%28correct%29.svg" alt="Cờ Úc">
+            </div>
+        </div>
+
+        <!-- Floating Social Buttons -->
+        <div class="fixed right-4 top-1/2 transform -translate-y-1/2 z-50 flex flex-col gap-4">
+            <a href="#" class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white text-xl hover:scale-110 transition-transform shadow-lg">
+                <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white text-xl hover:scale-110 transition-transform shadow-lg">
+                <i class="fa-brands fa-zalo"></i>
+            </a>
+            <a href="#" class="w-12 h-12 bg-vnpcRed rounded-full flex items-center justify-center text-white text-xl hover:scale-110 transition-transform shadow-lg">
+                <i class="fa-solid fa-phone"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <  </style>
 </head>
 <body>
   <header>
