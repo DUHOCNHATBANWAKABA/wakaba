@@ -15,15 +15,17 @@
       color: #333;
     }
    header {
-      background: url('nen.jpg') no-repeat center center;
-      background-size: cover;   /* tự co giãn vừa khung */
-      min-height: 50vh;        /* tự co giãn vừa khung */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
+    background: url('nen.jpg') no-repeat center center;
+    background-size: contain;   /* ảnh co giãn vừa khung, không bị cắt */
+    background-color: #000;     /* màu nền phụ nếu ảnh không phủ hết */
+    height: 400px;              /* chỉnh chiều cao header */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
 }
     }
     header h1 {
